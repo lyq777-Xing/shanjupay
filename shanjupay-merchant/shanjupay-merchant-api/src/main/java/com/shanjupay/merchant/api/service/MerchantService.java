@@ -1,5 +1,6 @@
 package com.shanjupay.merchant.api.service;
 
+import com.shanjupay.common.domain.BusinessException;
 import com.shanjupay.merchant.api.dto.MerchantDTO;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -12,5 +13,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2022-04-26
  */
 public interface MerchantService{
-    MerchantDTO findById(Long id);
+    MerchantDTO findById(Long id) throws BusinessException;
 }

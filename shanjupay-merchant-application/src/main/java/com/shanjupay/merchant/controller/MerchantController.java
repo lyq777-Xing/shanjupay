@@ -1,5 +1,7 @@
 package com.shanjupay.merchant.controller;
 
+import com.shanjupay.common.domain.BusinessException;
+import com.shanjupay.common.domain.CommonErrorCode;
 import com.shanjupay.merchant.api.dto.MerchantDTO;
 import com.shanjupay.merchant.api.service.MerchantService;
 import com.shanjupay.merchant.service.SmsService;
@@ -24,7 +26,7 @@ public class MerchantController {
 
     @ApiOperation(value = "test")
     @GetMapping("/merchant/{id}")
-    public MerchantDTO findBId(@PathVariable("id") Long id){
+    public MerchantDTO findBId(@PathVariable("id") Long id) throws BusinessException {
         MerchantDTO service = merchantService.findById(id);
         return service;
     }
